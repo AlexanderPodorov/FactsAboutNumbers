@@ -1,0 +1,31 @@
+﻿@page
+@model FactsAboutNumbers.Pages.AddFactModel
+@{
+    ViewData["Title"] = "AddFact";
+}
+
+@inject SignInManager<IdentityUser> SignInManager
+
+@if (!SignInManager.IsSignedIn(User))
+{
+    Response.Redirect("Identity/Account/Login");
+}
+else
+{
+    <h2>Add fact</h2>
+
+    <div class="form-group">
+        <label for="InputNumber">Number</label>
+        <input class="form-control" type="number" id="InputNumber" />
+    </div>
+    <div class="form-group">
+        <label for="InputFact">Fact</label>
+        <input class="form-control" type="text" id="InputFact" />
+    </div>
+    <div class="form-group">       
+        <button type="button" class="btn btn-default left" id="AddFact">Add Fact</button>
+    </div>
+}
+
+
+
