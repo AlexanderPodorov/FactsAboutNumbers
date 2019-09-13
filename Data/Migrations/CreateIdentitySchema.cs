@@ -8,6 +8,7 @@ namespace FactsAboutNumbers.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            /* Create custom table */
             migrationBuilder.CreateTable(
                 name: "NumberFacts",
                 columns: table => new
